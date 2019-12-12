@@ -1,7 +1,6 @@
 spring:
   profiles:
     active: dev
-
 ---
 server:
   port: 7001
@@ -24,14 +23,12 @@ security:
     password: 123
 
 
-
 eureka:
   instance:
     hostname: eurekaServer
     prefer-ip-address: true
     # 配置使用指定IP
-    #ip-address: 192.168.31.253
-    #ip-address: 172.22.144.3
+
   client:
     register-with-eureka: false #当前服务不注册到 eureka 之中
     fetch-registry: false  #不通过eureka 获取注册信息
@@ -40,15 +37,3 @@ eureka:
     service-url:
       #defaultZone: ${registry.uri2}
       defaultZone: http://bidata:123@eurekaServer:7001/eureka
-
-logging:
-  level:
-    com.netflix.discovery: 'OFF'
-    org.springframework.cloud: 'DEBUG'
-
-security:
-  basic:
-    enabled: true #启用安全认证
-  user:
-    name: bigdata
-    password: 123
