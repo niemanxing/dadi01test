@@ -1,14 +1,14 @@
 spring:
-   profiles:
-       active:
-	 - dev 
+  profiles:
+    active:
+    - dev
 
 spring:
-    profiles: dev
-    application:
-         name: cloud-test-dev
+  profiles: dev
+  application:
+    name: cloud-test-dev
 
 spring:
-    profiles: default
-    application:
-         name: cloud-test-default
+  profiles: default
+  application:
+    name: cloud-test-default
