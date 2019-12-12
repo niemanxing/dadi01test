@@ -3,6 +3,9 @@ spring:
     active: dev
 
 ---
+server:
+  port: 8201
+  
 spring:
   profiles: dev
   application:
@@ -29,6 +32,9 @@ eureka:
       defaultZone: http://bidata:123@eurekaServer:7001/eureka
 
 ---
+server:
+  port: 8101
+  
 spring:
   profiles: default
   application:
