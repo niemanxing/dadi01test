@@ -27,7 +27,7 @@ security:
 
 eureka:
   instance:
-    hostname: eurekaServer
+    #hostname: eurekaServer
     prefer-ip-address: true
     # 配置使用指定IP
     #ip-address: 192.168.31.253
@@ -39,7 +39,7 @@ eureka:
       enable: true
     service-url:
       #defaultZone: ${registry.uri2}
-      defaultZone: http://bidata:123@eurekaServer:7001/eureka
+      defaultZone: http://bidata:123@localhost:7001/eureka
 
 logging:
   level:
