@@ -27,7 +27,7 @@ security:
 
 eureka:
   instance:
-    #hostname: eurekaServer
+    hostname: eurekaServer
     prefer-ip-address: true
     # 配置使用指定IP
     #ip-address: 192.168.31.253
