@@ -36,9 +36,9 @@ server:
   port: 8101
   
 spring:
-  profiles: default
+  profiles: local
   application:
-    name: config-test-default
+    name: config-test-local
   cloud:
    ##  uri: http://localhost:3301
        label: master
