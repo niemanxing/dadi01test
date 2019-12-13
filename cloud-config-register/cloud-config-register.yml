@@ -8,7 +8,7 @@ server:
 spring:
   profiles: dev
   application:
-    name: cloud-eureka1
+    name: cloud-eureka
   cloud:
     config:
     #  uri: http://localhost:3301
