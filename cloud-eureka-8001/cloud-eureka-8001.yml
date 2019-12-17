@@ -15,12 +15,13 @@ spring:
       label: master
       #profile: prod
 
-security:
-  basic:
-    enabled: true #启用安全认证
-  user:
-    name: bigdata
-    password: 123456
+spring:
+  security:
+    basic:
+      enabled: true #启用安全认证
+    user:
+      name: bigdata
+      password: 123456
 
 
 eureka:
