@@ -20,7 +20,7 @@ security:
     enabled: true #启用安全认证
   user:
     name: bigdata
-    password: 123
+    password: 123456
 
 
 eureka:
@@ -36,4 +36,4 @@ eureka:
       enable: true
     service-url:
       #defaultZone: ${registry.uri2}
-      defaultZone: http://bidata:123@eurekaServer:8001/eureka
+      defaultZone: http://bidata:123456@eurekaServer:8001/eureka
