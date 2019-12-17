@@ -1,0 +1,80 @@
+spring:
+  profiles:
+    active: dev
+
+---
+server:
+  port: 9001
+  
+spring:
+  security:
+    basic:
+      enabled: true #启用安全认证
+    user:
+      name: bigdata
+      password: 123456
+  profiles: dev
+  application:
+    name: cloud-product
+  cloud:
+    config:
+    #  uri: http://localhost:3301
+      label: master
+      #profile: prod
+
+
+
+
+eureka:
+  instance:
+    #hostname: eurekaServer
+    prefer-ip-address: true
+    # 配置使用指定IP
+
+
+  client:
+    healthcheck:
+      enable: true
+    service-url:
+      # defaultZone: ${registry.uri}
+      #defaultZone: http://bigdata:123@eurekaServer:7001/eureka,http://bigdata:123@eurekaServer2:7002/eureka
+       defaultZone:  http://bigdata:123456@eurekaServer:7001/eureka
+
+info:
+  app.name: cloud-demo
+  company.name: www.dadi01.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
+---
+server:
+  port: 9002
+  
+spring:
+  security:
+    basic:
+      enabled: true #启用安全认证
+    user:
+      name: bigdata
+      password: 123456
+  profiles: local
+  application:
+    name: config-test-local
+  cloud:
+   ##  uri: http://localhost:3301
+       label: master
+      #profile: dev
+
+eureka:
+  instance:
+    #hostname: eurekaServer
+    prefer-ip-address: true
+    # 配置使用指定IP
+
+  client:
+    register-with-eureka: false #当前服务不注册到 eureka 之中
+    fetch-registry: false  #不通过eureka 获取注册信息
+    healthcheck:
+      enable: true
+    service-url:
+      #defaultZone: ${registry.uri2}
+      defaultZone: http://bidata:123456@eurekaServer:7001/eureka
