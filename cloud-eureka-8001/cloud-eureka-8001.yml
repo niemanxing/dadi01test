@@ -6,6 +6,10 @@ server:
   port: 8001
 
 spring:
+  security:
+    user:
+      name: bigdata
+      password: 123456
   profiles: dev
   application:
     name: point-eureka
@@ -16,19 +20,14 @@ spring:
       #profile: prod
 
 
-security:
-    basic:
-      enabled: true #启用安全认证
-    user:
-      name: bigdata
-      password: 123456
+
 
 eureka:
   instance:
-    hostname: eurekaServer
     prefer-ip-address: true
-    # 配置使用指定IP
-
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
   client:
     register-with-eureka: false #当前服务不注册到 eureka 之中
     fetch-registry: false  #不通过eureka 获取注册信息
