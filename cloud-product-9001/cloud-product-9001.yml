@@ -39,8 +39,4 @@ eureka:
       #defaultZone: http://bigdata:123@eurekaServer:7001/eureka,http://bigdata:123@eurekaServer2:7002/eureka
       defaultZone:  http://bigdata:123456@eurekaServer:8001/eureka
 
-info:
-  app.name: cloud-demo
-  company.name: www.dadi01.com
-  build.artifactId: ${project.artifactId}
-  build.version: ${project.version}
+ 
