@@ -16,6 +16,35 @@ spring:
       #  uri: http://localhost:3301
       label: master
       #profile: prod
+  datasource:
+    url: jdbc:mysql://10.253.0.40:3306/TENANT?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowMultiQueries=true
+    username: root
+    password: lyyGgnBe2F7dRH4c
+    driverClassName: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+      minIdle: 5
+      useGlobalDataSourceStat: true
+      validationQuery: SELECT 1 FROM DUAL
+      initialSize: 5
+      maxWait: 60000
+      filters: stat,wall,slf4j
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      testWhileIdle: true
+      testOnBorrow: false
+      minEvictableIdleTimeMillis: 300000
+      timeBetweenEvictionRunsMillis: 60000
+      testOnReturn: false
+      maxActive: 20
+      webStatFilter:
+        enabled: true
+      statViewServlet:
+        enabled: true
+        loginUsername: ${spring.security.user.name}
+        loginPassword: ${spring.security.user.password}
+        resetEnable: true
 
 security:
   basic:
