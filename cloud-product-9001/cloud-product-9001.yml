@@ -17,7 +17,7 @@ spring:
       label: master
       #profile: prod
   datasource:
-    url: jdbc:mysql://10.253.1.40:3306/TENANT?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowMultiQueries=true
+    url: jdbc:mysql://10.253.0.40:3306/TENANT?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowMultiQueries=true
     username: root
     password: lyyGgnBe2F7dRH4c
     driverClassName: com.mysql.jdbc.Driver
