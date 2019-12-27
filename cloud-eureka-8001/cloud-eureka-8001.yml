@@ -20,7 +20,7 @@ security:
     basic:
       enabled: true #启用安全认证
     user:
-      name: ${user.name}
+      name: ${user.username}
       password: ${user.password}
 
 eureka:
