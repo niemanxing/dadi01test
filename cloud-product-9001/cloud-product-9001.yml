@@ -46,12 +46,12 @@ spring:
         loginPassword: ${spring.security.user.password}
         resetEnable: true
 
-#security:
-#  basic:
-#    enabled: true #启用安全认证
-#  user:
-#    name: bigdata
-#    password: 123456
+security:
+  basic:
+    enabled: true #启用安全认证
+  user:
+    name: bigdata
+    password: 123456
 
       
 eureka:
