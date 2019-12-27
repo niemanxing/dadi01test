@@ -20,8 +20,8 @@ security:
     basic:
       enabled: true #启用安全认证
     user:
-      name: bigdata
-      password: 123456
+      name: ${user.name}
+      password: ${user.password}
 
 eureka:
   instance:
